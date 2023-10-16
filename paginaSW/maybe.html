@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juan Manuel's Resume</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #414141;">
+    <a class="navbar-brand" href="#" style="font-size: 2rem; font-weight: bold; background: linear-gradient(90deg, #00C0F9 -4.06%, #DC00FE 100%); background-clip: text;-webkit-background-clip: text;-webkit-text-fill-color: transparent;">Resume</a>
+    <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#about">About Me</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section style="position: relative; display: flex; align-items: center; justify-content: center; height: 100vh;">
+    <img id="heroImage" src="fotoJuan.jpg" alt="Juan Manuel" style="width: 100%; height: auto; position: absolute; top: 0; left: 0; z-index: 1;">
+    <div id="gradientDiv" style="position: absolute; top: 0; left: 0; width: 100%; background: linear-gradient(180deg, rgba(0, 192, 249, 0.70) 0%, rgba(220, 0, 254, 0.35) 100%); z-index: 2;"></div>
+    
+    <div style="text-align: center; z-index: 3;">
+        <h1 style="color: white; font-family: 'Inter', sans-serif; font-weight: 700; font-size: 5rem;">Hola, soy Juan Manuel</h1>
+        <button style="background-color: #414141; color: white; border-radius: 25px; padding: 10px 20px; border: none; margin-top: 20px; cursor: pointer;">Download CV</button>
+    </div>
+</section>
+
+
+
+<!-- About Section -->
+<section class="container-fluid py-5" id="about" style="background-color: white;">
+    <div class="row">
+        <!-- Text Content -->
+        <div class="col-md-6">
+            <h2 style="color: #414141; font-family: 'Inter'">About Me</h2>
+            <p style="color: #414141; font-family: 'Inter'">Soy estudiante de Ingeniería de Sistemas y Computación en la <a href ="https://uniandes.edu.co/">Universidad de los Andes</a> y miembro activo del semillero blockchain de la misma institución. A lo largo de mi trayectoria académica, he desarrollado habilidades tanto técnicas como interpersonales que me permiten destacar en entornos colaborativos. Mi experiencia en el semillero blockchain ha reforzado mi capacidad para trabajar en equipo, donde he colaborado eficazmente con compañeros en diversos proyectos. Además, soy una persona altamente motivada, con una atención meticulosa al detalle, lo que me ha permitido abordar desafíos con precisión y eficacia.
+
+                Mis objetivos a corto plazo se centran en ampliar mis conocimientos sobre tecnologías emergentes y explorar sus diversos casos de uso. A largo plazo, aspiro a diseñar y desarrollar soluciones innovadoras que generen un impacto positivo y aporten valor a la sociedad. Estoy convencido de que la combinación de mi formación académica y mi compromiso con la excelencia me posiciona de manera única para alcanzar estas metas.
+                </p>
+        </div>
+        <!-- Image Content -->
+        <div class="col-md-6 position-relative">
+            <!-- SVG Blob -->
+            <img src="blob.svg" alt="Custom SVG Blob" style="position: absolute; top: 50%; transform: translateY(-50%); left: 0; width: 100%; height: 150%; z-index: 1;">
+    
+            <!-- Image of Juan Manuel -->
+            <img src="fotoJuan2.jpeg" alt="Another Image of Juan Manuel" class="img-fluid" style="position: relative; z-index: 2; max-width: 70%; display: block; margin-left: auto; margin-right: auto; border-radius: 10%;">
+        </div>    
+
+    </div>
+</section>
+
+<!-- Subscription Form -->
+<section class="container-fluid py-5">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <h2 style="font-family: 'Inter'; color: #414141; size: 3em; font-weight: bold;">¿Deseas más información? </h2>
+            <h3 style="font-family: 'Inter'; color: #414141; color: #414141; size:1em;"> Por favor, déjame tu nombre y correo de contacto</h3>
+            <form>
+                <div class="form-group">
+                    <img class="img-fluid" src="blob (1).svg" alt="" style=" position: absolute; z-index: -1; top: 50%; transform: translateY(-50%);">
+                    <label id="contact" for="email" style="position: relative;">Email address:</label>
+                    <input type="email"  style="position: relative;" class="form-control" id="email" placeholder="Enter your email">
+                    <input type="text" class="form-control" id="text" placeholder="Hola Juan, me interesa tu perfil..." style="height: 10em; margin: 2em 0 0 0;">
+
+                </div>
+                <button class="btnA" style="background-color: #414141; color: white; border-radius: 25px; padding: 10px 20px; border: none; margin-top: 20px; cursor: pointer; transition: all 0.2s ease;">Send</button>
+
+            </form>
+        </div>
+    </div>
+</section>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    function adjustGradientHeight() {
+    // Get the height of the image
+    var imageHeight = document.getElementById('heroImage').offsetHeight;
+    
+    // Set the height of the gradient div to match the image's height
+    document.getElementById('gradientDiv').style.height = imageHeight + 'px';
+}
+
+// Check if the image is already loaded
+if (document.getElementById('heroImage').complete) {
+    adjustGradientHeight();
+} else {
+    // If not, adjust the gradient div's height when the image loads
+    document.getElementById('heroImage').onload = adjustGradientHeight;
+}
+
+// Adjust the gradient div's height when the window is resized
+window.addEventListener('resize', adjustGradientHeight);
+
+</script>
+</body>
+</html>

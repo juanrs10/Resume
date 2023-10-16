@@ -1,0 +1,11 @@
+.btnA{
+
+    transition: all 0.2s ease;
+
+
+}
+
+.btnA :active{
+
+    transform: scale(0.96);
+}
